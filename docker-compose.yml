@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+    foam:
+        build: .
+        hostname: windtunnel
+        runtime: nvidia
+        environment:
+            DISPLAY: $DISPLAY
+        volumes:
+        - ./data:/data
+        - /tmp/.X11-unix:/tmp/.X11-unix
